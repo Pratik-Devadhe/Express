@@ -1,0 +1,98 @@
+
+<% layout("/layouts/boilerplate.ejs") %>
+
+<style>
+
+    body{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* flex: 1; */
+    }
+
+    button{
+         color: black; border: 1px solid black; padding: 5px; border-radius: 5px;
+         margin: 2rem 0 0 1rem;
+    }
+
+    
+
+    .image{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image img{
+        border-radius: 20px;
+        padding : 3px;
+        width : 400px; 
+        height : 300px;
+        
+    }
+
+    .info{
+        display : grid;
+        text-align: center;
+        grid-template-columns: repeat(12 , 1fr);
+        margin : 0 2rem;
+        min-height : 200px;
+        border : 1px solid black;    
+    }
+
+    .des{
+        grid-column: span 6;
+        
+    }
+
+    .price{
+        grid-column: span 6;
+    }
+</style>
+
+    <h1>Here's the full information</h1>
+
+    
+    <div class="image">
+        
+     <img src="<%= list.image %>" >  
+
+     <h3>   <%=list.title%>    </h3>
+
+    </div>  
+
+
+    <div class="info">
+
+        <div class="des">
+            <%=list.description%>  
+        </div>
+        <div class="price">
+            <%=list.price%>  
+        </div>
+
+    </div>
+
+     <!-- 
+
+
+     
+
+     <%=list.location%>  
+
+     <%=list.country%>   -->
+
+    
+
+    <form method="get" action="/listings/<%=list.id%>/edit">
+       
+        <button> Edit the info </button>        
+    </form>
+
+   
+    <form method="post" action="/listings/delete/<%=list.id%>?_method=DELETE">
+       
+    <button style="background-color: red;">Delete listings</button>
+
+    </form>
+
+    

@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "give-me-a-joke": "^0.5.1",
+    "one-liner-joke": "^1.2.2",
+    "random-word-slugs": "^0.1.7"
+  },
+  "name": "one",
+  "version": "1.0.0",
+  "description": "my first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pratik devadhe",
+  "license": "ISC"
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp  - Chat Privetly</title>
+    <style>
+
+        body {
+            display : flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .one{
+            display : flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border : 1px solid black;
+            border-radius: 5px;
+            margin-bottom : 25px;
+            padding : 10px;
+            width : 300px;
+        }
+        
+        .one h2{
+            font-size: 18px;
+            padding : 5px;
+            width: fit-content;
+            border: 1px solid  beige ;
+            color : black;
+            background-color: rgb(11, 185, 220);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>CHATS </h1>
+
+    <form method="GET"  action="/chat/new">
+        <button style="width :160px; cursor: pointer; background-color: rgb(67, 228, 143); border-radius: 5px; font-size: 16px; padding :2px;"">Create a New Chat</button>
+    </form>
+
+    <p>
+        <% for (res of result) { %>
+            <div class="one">
+
+                <p>recived from <%= res.from %></p> 
+
+                <h2> <%= res.msg %> </h2>
+
+                <p> recived to <%= res.to %></p>
+
+                <hr style="width : 100%;  color : black;">
+
+                <form style="display: flex;  align-items: center;  justify-content:  space-around; width : 100%;" method="GET" action="/chats/<%= res._id %>/edit">
+
+                    
+                        <p>  <%= res.createdAt.toString().split(" ")[4] %></p>
+
+                    <button style="width :70px; cursor: pointer; background-color: rgb(87, 216, 255); border-radius: 5px; font-size: 14px; padding :2px;">Edit msg</button>
+
+
+                </form>
+
+                <hr style="width : 100%;  color : black;">
+
+                <form method="POST" action="/chat/<%= res._id %>/delete/?_method=DELETE">
+
+                    <button style="width :76px; cursor: pointer; background-color: rgb(255, 87, 87); border-radius: 5px; font-size: 13px; padding :2px;">Delete chat</button>
+
+                </form>
+                
+
+                
+
+            </div>
+        <% } %>
+    </p>
+</body>
+</html>

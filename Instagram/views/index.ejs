@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+</head>
+<body>
+
+    <div class="one">
+
+        <% for(post of posts) {%>
+            <div class="head">
+            <div class="two">
+            <img src="<%=post.img%>">
+            <h1><%=post.name%></h1>
+            <div>
+            <h3> posts &nbsp;&nbsp; follower &nbsp;&nbsp; following </h3> <br>
+            <h3> <%=post.p%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%=post.follwers%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%=post.following%> </h3>
+            </div>
+            </div>
+
+            <div class="content">
+                <div class="content">
+                <p><%=post.content%></p>
+            </div>
+            
+            
+            </div>
+            </div>
+
+            
+            
+
+        <% } %>
+
+    </div>
+    
+</body>
+</html>
