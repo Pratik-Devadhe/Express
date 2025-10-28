@@ -1,4 +1,4 @@
-# 🏡 AIRBNB Module 
+# 🏡 AIRBNB  
 
 This folder contains the **Airbnb Clone Project**, 
 It is built using **Node.js**, **Express**, **EJS**, and **MongoDB** to simulate core Airbnb-like functionalities such as creating, editing, and displaying property listings.
@@ -83,12 +83,11 @@ Server will run at **http://localhost:8000**
 
 | View | Preview |
 |------|----------|
-| 🏠 **Listings Page** | ![Listings Page](./images/listings.png) |
-| ➕ **Add New Listing** | ![Add New Listing](./images/new.png) |
-| ✏️ **Edit Listing** | ![Edit Listing](./images/edit.png) |
-| 📋 **Listing Information** | ![Delete Listing](./images/info.png) |
+| 🏠 **Listings Page** | ![Listings Page](AIRBNB/images/listings.png) |
+| ➕ **Add New Listing** | ![Add New Listing](AIRBNB/images/new.png) |
+| ✏️ **Edit Listing** | ![Edit Listing](AIRBNB/images/edit.png) |
+| 📋 **Listing Information** | ![Delete Listing](AIRBNB/images/info.png) |
 
-*(Ensure your image files are located in `Backend/AIRBNB/images/` folder.)*
 
 ---
 
@@ -100,12 +99,3 @@ Server will run at **http://localhost:8000**
 - **CSS**
 
 ---
-
-## 📄 License
-This project is open-source under the **MIT License**.
-
----
-
-## 💡 Author
-**Your Name**  
-[GitHub Profile](https://github.com/<your-username>)
