@@ -33,19 +33,28 @@
     .info{
         display : grid;
         text-align: center;
-        grid-template-columns: repeat(12 , 1fr);
+        align-items: center;
+        grid-template-columns: repeat(11 , 1fr);
         margin : 0 2rem;
-        min-height : 200px;
-        border : 1px solid black;    
+        min-height : 100px;
+        border : 1px solid black; 
+        border-radius: 12px;  
     }
 
     .des{
-        grid-column: span 6;
-        
+        grid-column: span 9;
+        padding-left: 2px;
+        font-weight: 600;
     }
 
     .price{
-        grid-column: span 6;
+        grid-column: span 1;
+         font-weight: 600;
+        margin-right: 10px;
+    }
+
+    button:hover{
+        cursor: pointer;
     }
 </style>
 
@@ -56,8 +65,12 @@
         
      <img src="<%= list.image %>" >  
 
-     <h3>   <%=list.title%>    </h3>
+     <h3 style="margin-bottom: 0;">   <%=list.title%>    </h3>
 
+     <div style="margin: 0 0 12px 12px; ">
+        <%=list.location%>,  
+        <%=list.country%>
+    </div>
     </div>  
 
 
@@ -66,32 +79,26 @@
         <div class="des">
             <%=list.description%>  
         </div>
+        <hr style="height: 62px;">
         <div class="price">
-            <%=list.price%>  
+            &#8377; &nbsp;<%=list.price%>  /Day
         </div>
 
     </div>
-
-     <!-- 
-
-
-     
-
-     <%=list.location%>  
-
-     <%=list.country%>   -->
+<!--      
+       -->
 
     
 
     <form method="get" action="/listings/<%=list.id%>/edit">
        
-        <button> Edit the info </button>        
+        <button style="background-color: rgb(197, 193, 193); font-size: 15px; font-weight: 600; border: none; padding : 7px;""> Edit the info </button>        
     </form>
 
    
     <form method="post" action="/listings/delete/<%=list.id%>?_method=DELETE">
        
-    <button style="background-color: red;">Delete listings</button>
+    <button style="background-color: red; font-size: 15px; font-weight: 600; border: none; padding : 7px; margin-bottom: 20px;;">Delete listings</button>
 
     </form>
 
