@@ -99,3 +99,108 @@ Server will run at **http://localhost:8000**
 - **CSS**
 
 ---
+
+
+# 🗄️ Databases 
+
+This folder is part of the **Backend** repository and demonstrates how to perform **CRUD operations** (Create, Read, Update, Delete) on a **MySQL database** using **Node.js**, **Express**, and **EJS templates**.
+
+---
+
+## 📁 Folder Structure
+
+```
+Backend/
+│
+├── Databases/
+│   ├── images/                  # 📸 Screenshots of project
+│   │   ├── home.png
+│   │   ├── user.png
+│   │   ├── edit.png
+│   │   ├── add.png
+│   │   ├── delete.png
+│   │
+│   ├── views/                   # EJS templates
+│   │   ├── add.ejs
+│   │   ├── edit.ejs
+│   │   ├── home.ejs
+│   │   ├── user.ejs
+│   │
+│   ├── index.js                 # Main Express app
+│   ├── schems.sql               # Database schema
+│   ├── package.json
+│   ├── package-lock.json
+│
+└── node_modules/
+```
+
+---
+
+## ⚙️ Key Features
+
+- ✅ MySQL database integration (`mysql2` module)  
+- 🧠 Dynamic views using **EJS templates**  
+- ✏️ Edit and Update existing records  
+- ➕ Add new users  
+- ❌ Delete user records  
+- 🧰 Uses `method-override` for PATCH & DELETE routes  
+
+---
+
+## 🔗 Main Routes
+
+| Route | Method | Description |
+|-------|---------|-------------|
+| `/` | GET | Show total number of users |
+| `/users` | GET | Display all users |
+| `/user/add` | GET | Render form to add a new user |
+| `/user/addnew` | POST | Add a new user to the database |
+| `/user/:id/edit` | GET | Render edit form for specific user |
+| `/user/:id` | PATCH | Update user details |
+| `/user/:id/delete` | DELETE | Remove a user from the database |
+
+---
+
+## 🖼️ Project Previews
+
+| View | Preview |
+|------|----------|
+| 🏠 **Home Page** | <img src="Databases/images/home.png" width="700" height="400" alt="Home Page"/> |
+| ➕ **Add New User** | <img src="Databases/images/add.png" width="700" height="400" alt="Add User"/> |
+| ✏️ **Edit User** | <img src="Databases/images/edit.png" width="700" height="400" alt="Edit User"/> |
+
+
+---
+
+## 🧩 Technologies Used
+
+- **Node.js**
+- **Express.js**
+- **EJS**
+- **MySQL2**
+- **Faker.js**
+- **Method-Override**
+
+---
+
+## 🚀 How to Run
+
+1. Navigate to the project directory:
+   ```bash
+   cd Backend/Databases
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the server:
+   ```bash
+   nodemon index.js
+   ```
+4. Open your browser and visit:
+   ```
+   http://localhost:8080/
+   ```
+
+---
+
