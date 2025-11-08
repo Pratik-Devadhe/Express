@@ -204,3 +204,96 @@ Backend/
 
 ---
 
+# 📸 SOCIAL MEDIA POST VIEWER  (INSTAGRAM)
+
+This folder contains the **Social Media Post Viewer Project**,  
+a simple **Node.js + Express + EJS** application that dynamically displays user posts, mimicking a minimal social media feed.  
+
+---
+
+## 📁 Folder Structure  
+
+```
+Backend/
+│
+├── SOCIAL_MEDIA_POSTS/
+│   │
+│   ├── public/
+│   │   └── css/
+│   │       └── style.css          # Custom styling for the feed layout
+│   │
+│   ├── views/
+│   │   └── index.ejs              # EJS template for displaying posts
+│   │
+│   ├── images/                    # Project screenshots (for documentation)
+│   │   ├── feed.png
+│   │   ├── user_post.png
+│   │
+│   ├── index.js                   # Entry point for the server
+│   ├── package.json
+│   ├── package-lock.json
+│   └── README.md
+```
+
+---
+
+## ⚙️ Setup Instructions  
+
+### 1️⃣ Navigate into the folder  
+```bash
+cd Backend/INSTAGRAM
+```
+
+### 2️⃣ Install dependencies  
+```bash
+npm install
+```
+
+### 3️⃣ Run the project  
+```bash
+nodemon index.js
+```
+
+Server will start at **http://localhost:8080**
+
+---
+
+## 🧩 Features  
+- 📱 Displays a collection of user posts  
+- 🧑‍🤝‍🧑 Each post includes profile image, name, followers, and content  
+- 🎨 Styled using CSS for a clean card-based layout  
+- 🧱 EJS templates render dynamic content from the server  
+- ⚡ Lightweight and fast Express backend  
+
+---
+
+## 🖼️ Project Screenshots  
+
+| View | Preview |
+|------|----------|
+| 👤 **User Post View** | ![User Post](Instagram/images/user_post.png) |
+
+---
+
+## 🛠️ Tech Stack  
+- **Node.js**  
+- **Express.js**  
+- **EJS (Embedded JavaScript Templates)**  
+- **CSS**
+
+---
+
+## 🧠 Project Overview  
+
+This project serves as a beginner-friendly example of rendering **dynamic data** in **EJS** views using Express.  
+It demonstrates how to pass an array of objects (posts) from the backend to the frontend template and display them beautifully.  
+
+---
+
+## 📌 Route  
+
+| Method | Route | Description |
+|--------|--------|-------------|
+| GET | `/posts` | Renders the EJS template and displays all posts |
+
+---
